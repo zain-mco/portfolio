@@ -182,20 +182,7 @@ const Projects = () => {
   const [filter, setFilter] = useState('all');
   
   const projects = [
-    {
-      id: 1,
-      title: 'E-Commerce Website',
-      image: 'https://via.placeholder.com/350x200',
-      category: 'web',
-      liveLink: 'https://example.com',
-    },
-    {
-      id: 2,
-      title: 'Weather',
-      image: weatherImage,
-      category: 'web',
-      liveLink: 'https://weather-ten-pearl.vercel.app/',
-    },
+   
     {
       id: 3,
       title: '3rd INTERNATIONAL BREAST CANCER SYMPOSIUM',
@@ -286,6 +273,20 @@ const Projects = () => {
       image: internationalNeuroscienceUpdatesCongressImage,
       category: 'web',
       liveLink: 'https://acpnevents.com/ns-h-ed2025/',
+    },
+    {
+      id: 1,
+      title: 'E-Commerce Website',
+      image: 'https://via.placeholder.com/350x200',
+      category: 'web',
+      liveLink: 'https://example.com',
+    },
+    {
+      id: 2,
+      title: 'Weather',
+      image: weatherImage,
+      category: 'web',
+      liveLink: 'https://weather-ten-pearl.vercel.app/',
     },
   ];
   

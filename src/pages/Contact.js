@@ -197,7 +197,7 @@ const Contact = () => {
               </ContactInfoIcon>
               <ContactInfoText>
                 <h3>Email</h3>
-                <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                <p><a href="mailto:zenlalahamoud@gmail.com">zenlalahamoud@gmail.com</a></p>
               </ContactInfoText>
             </ContactInfoItem>
             
@@ -211,7 +211,7 @@ const Contact = () => {
               </ContactInfoIcon>
               <ContactInfoText>
                 <h3>Phone</h3>
-                <p><a href="tel:+1234567890">+1 (234) 567-890</a></p>
+                <p><a href="tel:+971504235113">+971 (504) 235-113</a></p>
               </ContactInfoText>
             </ContactInfoItem>
             
@@ -222,10 +222,10 @@ const Contact = () => {
               style={{ width: '100%' }}
             >
               <SocialLinks>
-                <SocialLink href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="whatsapp">
+                <SocialLink href="https://wa.me/+971504235113" target="_blank" rel="noopener noreferrer" className="whatsapp">
                   <i className="fab fa-whatsapp"></i>
                 </SocialLink>
-                <SocialLink href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="facebook">
+                <SocialLink href="https://facebook.com/Zen.Hammoud/" target="_blank" rel="noopener noreferrer" className="facebook">
                   <i className="fab fa-facebook-f"></i>
                 </SocialLink>
 

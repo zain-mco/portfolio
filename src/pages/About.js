@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
 const AboutContainer = styled.div`
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 2rem;
 `;
@@ -169,6 +169,16 @@ const TimelineDate = styled.p`
   margin-bottom: 0.5rem;
 `;
 
+const CertificateLink = styled.a`
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: var(--secondary);
+  }
+`;
+
 const About = () => {
   return (
     <motion.div
@@ -194,7 +204,7 @@ const About = () => {
             Get to know me better
           </motion.p>
         </AboutHeader>
-        
+
         <AboutContent>
           <ProfileSection>
             <ProfileImage
@@ -204,7 +214,7 @@ const About = () => {
             >
               <img src={profileImage} alt="Zain" />
             </ProfileImage>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -212,17 +222,12 @@ const About = () => {
             >
               <h2>Zain Alhamoud</h2>
               <p style={{ color: 'var(--primary)', marginBottom: '1rem' }}>UI/UX Designer & Web Developer</p>
-              
+
               <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                  GitHub
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                  LinkedIn
-                </a>
-                <a href="/contact">Contact</a>
+
+                <a href="/contact" style={{ color: 'var(--primary)' }}>Contact</a>
               </div>
-              
+
               <div style={{ textAlign: 'left', width: '100%' }}>
                 <h3 style={{ marginBottom: '0.5rem' }}>Details</h3>
                 <p><strong>Location:</strong> Syria</p>
@@ -232,7 +237,7 @@ const About = () => {
               </div>
             </motion.div>
           </ProfileSection>
-          
+
           <BioSection>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -241,20 +246,9 @@ const About = () => {
             >
               <h2 style={{ marginBottom: '1rem' }}>Biography</h2>
               <p style={{ marginBottom: '1rem' }}>
-                I'm Zain Alhamoud, a 27-year-old UI/UX Designer & Web Developer from Syria with a bachelor's
-                degree in Electronics & Communication Engineering (ECE). I'm very passionate and
-                dedicated to my work in web design and development.
+              I'm Zain Alhamoud 27 years old from Syria. I'm 27 years old from Syria. I'm a UI/UX Designer & Web Developer, with a bachelor's degree in Electronics & Communication Engineering (ECE), and I'm very passionate and dedicated to my work.
               </p>
-              <p style={{ marginBottom: '1rem' }}>
-                I have experience designing and developing custom websites for conferences and trade shows,
-                creating interactive user interfaces, and implementing responsive designs that work across
-                various devices and browsers.
-              </p>
-              <p>
-                I'm constantly learning and exploring new technologies to stay at the forefront of 
-                web design and development. I'm dedicated to creating beautiful, functional websites
-                that provide excellent user experiences.
-              </p>
+              
               <h2 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Experience</h2>
               <ul style={{ listStyleType: 'none', padding: 0 }}>
                 <li style={{ marginBottom: '1.5rem' }}>
@@ -269,7 +263,7 @@ const About = () => {
                 </li>
                 <li>
                   <h3 style={{ color: 'var(--primary)', marginBottom: '0.5rem' }}>Web Designer and Developer</h3>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--light-text)', marginBottom: '0.5rem' }}>EMMA Tell | 06/2021 - 02/2023 | Homs, Syria</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--light-text)', marginBottom: '0.5rem' }}>Freelance | 06/2021 - 02/2023 | Homs, Syria</p>
                   <ul style={{ paddingLeft: '1.5rem' }}>
                     <li>Contributed to responsive web app development using HTML, CSS, JavaScript & WordPress</li>
                     <li>Resolved front-end issues promptly for enhanced application functionality</li>
@@ -277,7 +271,7 @@ const About = () => {
                 </li>
               </ul>
             </motion.div>
-            
+
             <ExperienceSection>
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
@@ -287,7 +281,7 @@ const About = () => {
               >
                 Education
               </motion.h2>
-              
+
               <TimelineItem
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -300,7 +294,7 @@ const About = () => {
                   Completed my bachelor's degree in Electronics & Communication Engineering at Albath University in Syria.
                 </p>
               </TimelineItem>
-              
+
               <TimelineItem
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -308,24 +302,10 @@ const About = () => {
               >
                 <TimelineTitle>Professional Training</TimelineTitle>
                 <TimelineSubtitle>Online Courses & Certifications</TimelineSubtitle>
-                <TimelineDate>2021 - Present</TimelineDate>
+                <TimelineDate>2021 - 2023</TimelineDate>
                 <p>
-                  Meta Front-End Developer (Coursera) Certificate<br/>
-                  Business English: Networking (University of Washington) Certificate
-                </p>
-              </TimelineItem>
-              
-              <TimelineItem
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-              >
-                <TimelineTitle>Junior Web Developer</TimelineTitle>
-                <TimelineSubtitle>WebStart Agency</TimelineSubtitle>
-                <TimelineDate>2016 - 2018</TimelineDate>
-                <p>
-                  Built responsive websites using HTML, CSS, and JavaScript. 
-                  Assisted in the development of WordPress themes and plugins.
+                  Meta Front-End Developer (Coursera) <CertificateLink href='https://www.coursera.org/account/accomplishments/professional-cert/PJ8T7J6FGL68'><b>Certificate</b></CertificateLink><br />
+                  Business English: Networking (University of Washington) <CertificateLink href='https://www.coursera.org/account/accomplishments/verify/3LCR4R56JWFN'><b>Certificate</b></CertificateLink>
                 </p>
               </TimelineItem>
             </ExperienceSection>

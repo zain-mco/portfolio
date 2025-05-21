@@ -24,7 +24,8 @@ const FooterContent = styled.div`
 
 const SocialLinks = styled.div`
   display: flex;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
   margin-bottom: 1.5rem;
 `;
 
@@ -56,22 +57,16 @@ const Footer = () => {
           transition={{ duration: 0.5 }}
         >
           <SocialLinks>
-            <SocialLink href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github"></i>
-            </SocialLink>
-            <SocialLink href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin"></i>
-            </SocialLink>
-            <SocialLink href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-twitter"></i>
-            </SocialLink>
-            <SocialLink href="mailto:your.email@example.com">
+            <SocialLink href="mailto:zenlalahamoud@gmail.com">
               <i className="fas fa-envelope"></i>
+            </SocialLink>
+            <SocialLink href="tel:+971504235113">
+              <i className="fas fa-phone"></i>
             </SocialLink>
           </SocialLinks>
           
           <Copyright>
-            &copy; {currentYear} My Portfolio. All rights reserved.
+            &copy; {currentYear} Zain. All rights reserved.
           </Copyright>
         </motion.div>
       </FooterContent>
