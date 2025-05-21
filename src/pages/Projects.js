@@ -76,12 +76,15 @@ const ProjectsGrid = styled.div`
   }
 `;
 
-const ProjectCard = styled(motion.div)`
+const ProjectCard = styled(motion.a)`
   background-color: var(--white);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
+  display: block;
   
   &:hover {
     transform: translateY(-10px);
@@ -350,6 +353,9 @@ const Projects = () => {
           {filteredProjects.map((project, index) => (
             <ProjectCard
               key={project.id}
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
