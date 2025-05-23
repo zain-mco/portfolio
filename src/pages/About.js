@@ -246,9 +246,9 @@ const About = () => {
             >
               <h2 style={{ marginBottom: '1rem' }}>Biography</h2>
               <p style={{ marginBottom: '1rem' }}>
-              I'm Zain Alhamoud 27 years old from Syria. I'm 27 years old from Syria. I'm a UI/UX Designer & Web Developer, with a bachelor's degree in Electronics & Communication Engineering (ECE), and I'm very passionate and dedicated to my work.
+                I'm Zain Alhamoud 27 years old from Syria. I'm 27 years old from Syria. I'm a UI/UX Designer & Web Developer, with a bachelor's degree in Electronics & Communication Engineering (ECE), and I'm very passionate and dedicated to my work.
               </p>
-              
+
               <h2 style={{ marginTop: '2rem', marginBottom: '1rem' }}>Experience</h2>
               <ul style={{ listStyleType: 'none', padding: 0 }}>
                 <li style={{ marginBottom: '1.5rem' }}>
@@ -265,8 +265,8 @@ const About = () => {
                   <h3 style={{ color: 'var(--primary)', marginBottom: '0.5rem' }}>Web Designer and Developer</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--light-text)', marginBottom: '0.5rem' }}>Freelance | 06/2021 - 02/2023 | Homs, Syria</p>
                   <ul style={{ paddingLeft: '1.5rem' }}>
-                    <li>Contributed to responsive web app development using HTML, CSS, JavaScript & WordPress</li>
-                    <li>Resolved front-end issues promptly for enhanced application functionality</li>
+                    <li>Create responsive web app or mobile app development using Figma, XD, Flutter, HTML, CSS, JavaScript & WordPress. Resolved issues promptly for enhanced application functionality</li>
+
                   </ul>
                 </li>
               </ul>

@@ -16,6 +16,8 @@ import abudhabi5thBrainImage from '../assets/imgs/projects/11.png';
 import emiratesMultipleSclerosisImage from '../assets/imgs/projects/12.png';
 import radiologyHighlightsConferenceinDubaiImage from '../assets/imgs/projects/13.png';
 import internationalNeuroscienceUpdatesCongressImage from '../assets/imgs/projects/14.png';
+import gccheadachImage from '../assets/imgs/projects/15.png';
+import portfolioImage from '../assets/imgs/projects/16.png';
 
 const ProjectsContainer = styled.div`
   max-width: 1200px;
@@ -184,7 +186,7 @@ const ViewDetailsButton = styled(Link)`
 const Projects = () => {
   const [filter, setFilter] = useState('all');
   
-  const projects = [
+  const webProjects = [
    
     {
       id: 3,
@@ -223,7 +225,7 @@ const Projects = () => {
     },
     {
       id: 8,
-      title: '9th International Conference on Alzheimer’s Disease',
+      title: '9th International Conference on Alzheimer\'s Disease',
       image: AlzheimerImage,
       category: 'web',
       liveLink: 'https://mco.ae/icadme/',
@@ -277,13 +279,13 @@ const Projects = () => {
       category: 'web',
       liveLink: 'https://acpnevents.com/ns-h-ed2025/',
     },
-    {
-      id: 1,
-      title: 'E-Commerce Website',
-      image: 'https://via.placeholder.com/350x200',
-      category: 'web',
-      liveLink: 'https://example.com',
-    },
+    // {
+    //   id: 1,
+    //   title: 'E-Commerce Website',
+    //   image: 'https://via.placeholder.com/350x200',
+    //   category: 'web',
+    //   liveLink: 'https://example.com',
+    // },
     {
       id: 2,
       title: 'Weather',
@@ -292,10 +294,101 @@ const Projects = () => {
       liveLink: 'https://weather-ten-pearl.vercel.app/',
     },
   ];
+
+  // Design projects - same projects but with different links for mockup designs
+  const designProjects = [
+    {
+      id: 101,
+      title: '3rd INTERNATIONAL BREAST CANCER SYMPOSIUM',
+      image: breastCancerImage,
+      category: 'design',
+      liveLink: 'https://xd.adobe.com/view/d6b5b1de-28fc-4bd7-9bef-dbe4d576317d-83e6/',
+    },
+    {
+      id: 102,
+      title: '2nd Al Ain Neurology Conference 2025',
+      image: ancImage,
+      category: 'design',
+      liveLink: 'https://www.figma.com/proto/vvoXNpIROqTfaVLAzPlRig/Untitled?node-id=0-1&t=6fPCStF24sv7Exti-1',
+    },
+    {
+      id: 103,
+      title: '2nd annual diabetes conference',
+      image: diabetesImage,
+      category: 'design',
+      liveLink: 'https://xd.adobe.com/view/b659ad2b-53bd-4fc7-b94b-fe48a8bd7e35-e30a/',
+    },
+    {
+      id: 104,
+      title: '4th GCC Headache and Pain Summit 2025',
+      image: gccheadachImage,
+      category: 'design',
+      liveLink: 'https://xd.adobe.com/view/2c1ed7ed-629c-4e21-9ee0-90ac86808707-794d/',
+    },
+    
+  
+    {
+      id: 108,
+      title: 'MCO Institute',
+      image: mcoInstituteImage,
+      category: 'design',
+      liveLink: 'https://www.figma.com/proto/gqMolo9UTAx0vaYsIkrZDZ/Untitled?node-id=5-5378&t=UcRG8muZwtSBU2SS-1',
+    },
+    {
+      id: 109,
+      title: '1st Diabetes Education Conference',
+      image: diabetes1stImage,
+      category: 'design',
+      liveLink: 'https://example.com/design/1stdiabeteseducationconference',
+    },
+    {
+      id: 110,
+      title: '5th edition of the Abu Dhabi Brain Conference',
+      image: abudhabi5thBrainImage,
+      category: 'design',
+      liveLink: 'https://xd.adobe.com/view/98a8eb09-b294-4ab1-8dda-94dcb1b0f3a8-cdfb/?fullscreen',
+    },
+    {
+      id: 111,
+      title: '7th Emirates Multiple Sclerosis Forum',
+      image: emiratesMultipleSclerosisImage,
+      category: 'design',
+      liveLink: 'https://xd.adobe.com/view/73458cda-7717-44d1-a301-de8e6040330b-2616/?fullscreen',
+    },
+    {
+      id: 113,
+      title: '12th International Neuroscience Updates Congress',
+      image: internationalNeuroscienceUpdatesCongressImage,
+      category: 'design',
+      liveLink: 'https://xd.adobe.com/view/5addb0ac-acb1-4b14-96cc-c98e7f4423da-0f8e/',
+    },
+   
+ 
+  ];
+  
+  // App projects
+  const appProjects = [
+    {
+      id: 200,
+      title: 'Weather',
+      image: portfolioImage,
+      category: 'app',
+      liveLink: '/assets/app/portfolio.apk',
+      isDownloadable: true,
+      fileName: 'portfolio.apk'
+    },
+  ];
+
+  // Combine all projects for the 'all' filter
+  const allProjects = [...webProjects, ...designProjects, ...appProjects];
   
   const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === filter);
+    ? allProjects 
+    : filter === 'web'
+      ? webProjects
+      : filter === 'design'
+        ? designProjects
+        : allProjects.filter(project => project.category === filter);
   
   return (
     <motion.div
@@ -340,6 +433,14 @@ const Projects = () => {
             Web
           </FilterButton>
           <FilterButton
+            active={filter === 'design'}
+            onClick={() => setFilter('design')}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Design
+          </FilterButton>
+          <FilterButton
             active={filter === 'app'}
             onClick={() => setFilter('app')}
             whileHover={{ scale: 1.05 }}
@@ -356,6 +457,7 @@ const Projects = () => {
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
+              download={project.isDownloadable ? true : undefined}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -370,12 +472,15 @@ const Projects = () => {
 
                 
                 <ProjectLinks>
-                  <ProjectLink href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                    <i className="fas fa-external-link-alt"></i>
-                    <span>Live Demo</span>
+                  <ProjectLink 
+                    href={project.liveLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    download={project.isDownloadable ? project.fileName || true : undefined}
+                  >
+                    <i className={project.isDownloadable ? "fas fa-download" : "fas fa-external-link-alt"}></i>
+                    <span>{project.isDownloadable ? "Download" : "Live Demo"}</span>
                   </ProjectLink>
-
-
                 </ProjectLinks>
               </ProjectContent>
             </ProjectCard>
