@@ -18,6 +18,8 @@ import radiologyHighlightsConferenceinDubaiImage from '../assets/imgs/projects/1
 import internationalNeuroscienceUpdatesCongressImage from '../assets/imgs/projects/14.png';
 import gccheadachImage from '../assets/imgs/projects/15.png';
 import portfolioImage from '../assets/imgs/projects/16.png';
+import diabetsEducationConferenceImage from '../assets/imgs/projects/17.png';
+import etsAnualCongressImage from '../assets/imgs/projects/18.png';
 
 const ProjectsContainer = styled.div`
   max-width: 1200px;
@@ -185,9 +187,9 @@ const ViewDetailsButton = styled(Link)`
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
-  
+
   const webProjects = [
-   
+
     {
       id: 3,
       title: '3rd INTERNATIONAL BREAST CANCER SYMPOSIUM',
@@ -293,6 +295,13 @@ const Projects = () => {
       category: 'web',
       liveLink: 'https://weather-ten-pearl.vercel.app/',
     },
+    {
+      id: 16,
+      title: '2nd Diabetes Education Conference',
+      image: diabetsEducationConferenceImage,
+      category: 'web',
+      liveLink: 'https://mco.ae/2nddiabeteseducation/',
+    },
   ];
 
   // Design projects - same projects but with different links for mockup designs
@@ -325,8 +334,8 @@ const Projects = () => {
       category: 'design',
       liveLink: 'https://xd.adobe.com/view/2c1ed7ed-629c-4e21-9ee0-90ac86808707-794d/',
     },
-    
-  
+
+
     {
       id: 108,
       title: 'MCO Institute',
@@ -334,13 +343,7 @@ const Projects = () => {
       category: 'design',
       liveLink: 'https://www.figma.com/proto/gqMolo9UTAx0vaYsIkrZDZ/Untitled?node-id=5-5378&t=UcRG8muZwtSBU2SS-1',
     },
-    {
-      id: 109,
-      title: '1st Diabetes Education Conference',
-      image: diabetes1stImage,
-      category: 'design',
-      liveLink: 'https://example.com/design/1stdiabeteseducationconference',
-    },
+
     {
       id: 110,
       title: '5th edition of the Abu Dhabi Brain Conference',
@@ -362,15 +365,29 @@ const Projects = () => {
       category: 'design',
       liveLink: 'https://xd.adobe.com/view/5addb0ac-acb1-4b14-96cc-c98e7f4423da-0f8e/',
     },
-   
- 
+    {
+      id: 114,
+      title: '2nd Diabetes Education Conference',
+      image: diabetsEducationConferenceImage,
+      category: 'design',
+      liveLink: 'https://xd.adobe.com/view/7a4a4eb2-14f0-4cb8-992f-0dcf922bdfd2-2f19/',
+    },
+    {
+      id: 115,
+      title: 'ETS Annual Congress 2025',
+      image: etsAnualCongressImage,
+      category: 'design',
+      liveLink: 'https://xd.adobe.com/view/51d16bcf-f782-48cf-9669-77e065ae989d-0482/?fullscreen',
+    },
+
+
   ];
-  
+
   // App projects
   const appProjects = [
     {
       id: 200,
-      title: 'Weather',
+      title: 'Portfolio',
       image: portfolioImage,
       category: 'app',
       liveLink: '/assets/app/portfolio.apk',
@@ -381,15 +398,15 @@ const Projects = () => {
 
   // Combine all projects for the 'all' filter
   const allProjects = [...webProjects, ...designProjects, ...appProjects];
-  
-  const filteredProjects = filter === 'all' 
-    ? allProjects 
+
+  const filteredProjects = filter === 'all'
+    ? allProjects
     : filter === 'web'
       ? webProjects
       : filter === 'design'
         ? designProjects
         : allProjects.filter(project => project.category === filter);
-  
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -414,7 +431,7 @@ const Projects = () => {
             Check out some of my recent work
           </motion.p>
         </ProjectsHeader>
-        
+
         <FilterContainer>
           <FilterButton
             active={filter === 'all'}
@@ -449,7 +466,7 @@ const Projects = () => {
             App
           </FilterButton>
         </FilterContainer>
-        
+
         <ProjectsGrid>
           {filteredProjects.map((project, index) => (
             <ProjectCard
@@ -465,17 +482,17 @@ const Projects = () => {
               <ProjectImage>
                 <img src={project.image} alt={project.title} />
               </ProjectImage>
-              
+
               <ProjectContent>
                 <ProjectTitle>{project.title}</ProjectTitle>
-                
 
-                
+
+
                 <ProjectLinks>
-                  <ProjectLink 
-                    href={project.liveLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <ProjectLink
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     download={project.isDownloadable ? project.fileName || true : undefined}
                   >
                     <i className={project.isDownloadable ? "fas fa-download" : "fas fa-external-link-alt"}></i>
