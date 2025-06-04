@@ -6,13 +6,8 @@ const SectionTitle = styled.h2`
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: var(--text);
-  
-  /* Ensure readability in light mode */
-  @media (prefers-color-scheme: light) {
-    color: black;
-    font-weight: 700;
-  }
+  color: white !important; /* Force white color in all views */
+  font-weight: 700;
 `;
 
 const SkillsContainer = styled.div`
