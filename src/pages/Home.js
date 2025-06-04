@@ -5,7 +5,6 @@ import Skills from '../components/Skills';
 import profileImage from '../assets/imgs/profile/zain.svg';
 
 const HomeContainer = styled.div`
- 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,17 +14,37 @@ const HomeContainer = styled.div`
 `;
 
 const HeroSection = styled.div`
-  max-width: 1100px;
+  max-width: 1200px;
   margin-bottom: 4rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3rem;
+  background: linear-gradient(135deg, rgba(0, 118, 255, 0.2), rgba(255, 0, 128, 0.2));
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M30,40 L70,40 L70,60 L30,60 Z" stroke="rgba(255,255,255,0.1)" fill="none" stroke-width="1"/></svg>');
+    background-size: 200px 200px;
+    opacity: 0.5;
+    z-index: -1;
+  }
   
   @media (max-width: 768px) {
     flex-direction: column-reverse;
     text-align: center;
+    padding: 2rem;
   }
 `;
 
@@ -127,29 +146,42 @@ const ProfileImageContainer = styled(motion.div)`
   }
 `;
 
-
-
 const Title = styled(motion.h1)`
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 800;
   margin-bottom: 1.5rem;
   background: linear-gradient(to right, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  letter-spacing: -1px;
+  line-height: 1.2;
   
   @media (max-width: 768px) {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 `;
 
 const Subtitle = styled(motion.h2)`
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 500;
   color: var(--light-text);
   margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    border-radius: 2px;
+  }
   
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 `;
 
