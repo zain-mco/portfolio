@@ -20,6 +20,7 @@ import gccheadachImage from '../assets/imgs/projects/15.png';
 import portfolioImage from '../assets/imgs/projects/16.png';
 import diabetsEducationConferenceImage from '../assets/imgs/projects/17.png';
 import etsAnualCongressImage from '../assets/imgs/projects/18.png';
+import calcImage from '../assets/imgs/projects/19.png';
 
 const ProjectsContainer = styled.div`
   max-width: 1200px;
@@ -393,6 +394,15 @@ const Projects = () => {
       liveLink: '/assets/app/portfolio.apk',
       isDownloadable: true,
       fileName: 'portfolio.apk'
+    },
+    {
+      id: 201,
+      title: 'Calculator',
+      image: calcImage,
+      category: 'app',
+      liveLink: '/assets/app/calculator.apk',
+      isDownloadable: true,
+      fileName: 'calculator.apk'
     },
   ];
 
