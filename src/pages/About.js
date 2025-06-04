@@ -265,7 +265,7 @@ const About = () => {
                   <h3 style={{ color: 'var(--primary)', marginBottom: '0.5rem' }}>Web Designer and Developer</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--light-text)', marginBottom: '0.5rem' }}>Freelance | 06/2021 - 02/2023 | Homs, Syria</p>
                   <ul style={{ paddingLeft: '1.5rem' }}>
-                    <li> responsive web app or mobile app development using Figma, XD, Flutter, HTML, CSS, JavaScript & WordPress. Resolved issues promptly for enhanced application functionality</li>
+                    <li>Create responsive web app or mobile app development using Figma, XD, Flutter, HTML, CSS, JavaScript & WordPress. Resolved issues promptly for enhanced application functionality</li>
 
                   </ul>
                 </li>
