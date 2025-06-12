@@ -62,7 +62,7 @@ const NavLinks = styled.div`
     top: 100%;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: #1d1d1d;
     padding: 1.5rem 1rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     gap: 1.2rem;
@@ -160,7 +160,7 @@ const MobileMenuButton = styled.button`
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-  
+
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
@@ -176,11 +176,11 @@ const Navbar = () => {
           <span>Portfolio</span>
         </Logo>
       </motion.div>
-      
+
       <MobileMenuButton onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? '✕' : '☰'}
       </MobileMenuButton>
-      
+
       <NavLinks isOpen={isOpen}>
         <motion.div
           initial={{ opacity: 0 }}
@@ -191,7 +191,7 @@ const Navbar = () => {
             Home
           </NavLink>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -201,7 +201,7 @@ const Navbar = () => {
             About
           </NavLink>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -211,7 +211,7 @@ const Navbar = () => {
             Projects
           </NavLink>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
